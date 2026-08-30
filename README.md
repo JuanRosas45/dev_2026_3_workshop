@@ -34,7 +34,7 @@ After clone the project, open Visual Studio Code the working directory.
 In the terminal of Visual Studio Code create a new Virtual Environment
 
 ```bash
-  python -m venv myvenv
+  pvython -m venv myven
 ```
 
 Active the venv (Linux)

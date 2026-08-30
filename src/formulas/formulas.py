@@ -180,7 +180,7 @@ class Formulas:
             tiempo (float): Tiempo en años
             n (int): Número de capitalizaciones por año, por defecto 1
 
-        Returns:
+        Returns:ens
             float: Monto final
 
         Fórmula: M = C * (1 + r/n)^(n*t)
