@@ -63,23 +63,7 @@ class Conversion:
                 resultado += valores[romano[i]]
 
         return resultado
-    
-    def texto_a_morse(self, texto):
-        """
-        Convierte texto a código Morse.
-        
-        Args:
-            texto (str): Texto a convertir (letras y números)
-            
-        Returns:
-            str: Código Morse separado por espacios
-            
-        Ejemplo:
-            texto_a_morse("SOS") -> "... --- ..."
-            texto_a_morse("HELLO") -> ".... . .-.. .-.. ---"
-        """
-        pass
-    
+
     def texto_a_morse(self, texto):
         morse = {
         "A": ".-", "B": "-...", "C": "-.-.", "D": "-..", "E": ".",
