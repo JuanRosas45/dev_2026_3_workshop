@@ -34,17 +34,11 @@ class Data:
         return resultado
     
     def rotar_lista(self, lista, k):
-        """
-        Rota los elementos de una lista k posiciones a la derecha.
-        
-        Args:
-            lista (list): Lista a rotar
-            k (int): Número de posiciones a rotar
-            
-        Returns:
-            list: Lista rotada
-        """
-        pass
+        if not lista:
+            return []
+
+        k = k % len(lista)
+        return lista[-k:] + lista[:-k]
     
     def encuentra_numero_faltante(self, lista):
         """
