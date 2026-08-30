@@ -41,16 +41,9 @@ class Data:
         return lista[-k:] + lista[:-k]
     
     def encuentra_numero_faltante(self, lista):
-        """
-        Encuentra el número faltante en una lista de enteros del 1 al n.
-        
-        Args:
-            lista (list): Lista de enteros del 1 al n con un número faltante
-            
-        Returns:
-            int: El número que falta en la secuencia
-        """
-        pass
+        n = len(lista) + 1
+        total = n * (n + 1) // 2
+        return total - sum(lista)
     
     def es_subconjunto(self, conjunto1, conjunto2):
         """
