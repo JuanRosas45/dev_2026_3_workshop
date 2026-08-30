@@ -93,4 +93,10 @@ class Conversion:
             "8": "---..", "9": "----."
         }
 
-        return " ".join(morse[letra] for letra in texto.upper() if letra in morse)
+        resultado = []
+
+        for letra in texto.upper():
+            if letra in morse:
+                resultado.append(morse[letra])
+
+        return " ".join(resultado)
