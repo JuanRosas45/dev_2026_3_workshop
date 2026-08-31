@@ -37,24 +37,7 @@ class Formulas:
         return b ** 2 - 4 * a * c
 
     def raices_cuadraticas(self, a, b, c):
-        """
-        Calcula las raíces reales de una ecuación cuadrática ax^2 + bx + c = 0
-        usando la fórmula general. Si el discriminante es negativo, lanza ValueError.
-
-        Args:
-            a (float): Coeficiente cuadrático (distinto de cero)
-            b (float): Coeficiente lineal
-            c (float): Término independiente
-
-        Returns:
-            tuple: (raiz1, raiz2) las dos raíces reales
-
-        Fórmula: x = (-b ± sqrt(b^2 - 4ac)) / (2a)
-
-        Ejemplo:
-            raices_cuadraticas(1, -3, 2) -> (2.0, 1.0)
-        """
-        pass
+        discriminante = self.discriminante(a, b, c)
 
     def imc(self, peso, altura):
         """
