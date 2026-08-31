@@ -20,22 +20,8 @@ class Formulas:
     def energia_potencial(self, masa, altura, gravedad=9.8):
         return masa * gravedad * altura
     def ley_ohm_voltaje(self, corriente, resistencia):
-        """
-        Calcula el voltaje usando la ley de Ohm.
+        return corriente * resistencia
 
-        Args:
-            corriente (float): Corriente eléctrica (Amperios)
-            resistencia (float): Resistencia (Ohmios)
-
-        Returns:
-            float: Voltaje (Voltios)
-
-        Fórmula: V = I * R
-
-        Ejemplo:
-            ley_ohm_voltaje(2, 5) -> 10.0
-        """
-        pass
 
     def ley_ohm_corriente(self, voltaje, resistencia):
         """
