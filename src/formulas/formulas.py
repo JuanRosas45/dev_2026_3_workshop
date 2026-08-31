@@ -10,23 +10,7 @@ class Formulas:
         return posicion_inicial + velocidad_inicial * tiempo + (aceleracion * tiempo ** 2) / 2
 
     def mruv_velocidad(self, velocidad_inicial, aceleracion, tiempo):
-        """
-        Calcula la velocidad final de un móvil con aceleración constante (MRUV).
-
-        Args:
-            velocidad_inicial (float): Velocidad inicial (metros/segundo)
-            aceleracion (float): Aceleración constante (metros/segundo^2)
-            tiempo (float): Tiempo transcurrido (segundos)
-
-        Returns:
-            float: Velocidad final
-
-        Fórmula: v = v0 + a*t
-
-        Ejemplo:
-            mruv_velocidad(2, 1, 3) -> 5.0
-        """
-        pass
+        return velocidad_inicial + aceleracion * tiempo
 
     def fuerza_newton(self, masa, aceleracion):
         """
