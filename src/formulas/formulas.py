@@ -30,43 +30,11 @@ class Formulas:
         return capital * tasa * tiempo
 
     def interes_compuesto(self, capital, tasa, tiempo, n=1):
-        """
-        Calcula el monto final de un capital a interés compuesto.
+        return capital * (1 + tasa / n) ** (n * tiempo)
 
-        Args:
-            capital (float): Capital inicial
-            tasa (float): Tasa de interés anual (en decimal, ej. 0.05 para 5%)
-            tiempo (float): Tiempo en años
-            n (int): Número de capitalizaciones por año, por defecto 1
-
-        Returns:
-            float: Monto final
-
-        Fórmula: M = C * (1 + r/n)^(n*t)
-
-        Ejemplo:
-            interes_compuesto(1000, 0.05, 2) -> 1102.5
-        """
-        pass
 
     def discriminante(self, a, b, c):
-        """
-        Calcula el discriminante de una ecuación cuadrática ax^2 + bx + c = 0.
-
-        Args:
-            a (float): Coeficiente cuadrático
-            b (float): Coeficiente lineal
-            c (float): Término independiente
-
-        Returns:
-            float: Discriminante
-
-        Fórmula: D = b^2 - 4*a*c
-
-        Ejemplo:
-            discriminante(1, -3, 2) -> 1
-        """
-        pass
+        return b ** 2 - 4 * a * c
 
     def raices_cuadraticas(self, a, b, c):
         """
