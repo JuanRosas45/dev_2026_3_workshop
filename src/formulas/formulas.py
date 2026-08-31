@@ -24,22 +24,7 @@ class Formulas:
 
 
     def ley_ohm_corriente(self, voltaje, resistencia):
-        """
-        Calcula la corriente usando la ley de Ohm.
-
-        Args:
-            voltaje (float): Voltaje (Voltios)
-            resistencia (float): Resistencia (Ohmios)
-
-        Returns:
-            float: Corriente (Amperios)
-
-        Fórmula: I = V / R
-
-        Ejemplo:
-            ley_ohm_corriente(10, 5) -> 2.0
-        """
-        pass
+        return voltaje / resistencia
 
     def interes_simple(self, capital, tasa, tiempo):
         """
