@@ -39,23 +39,18 @@ class Formulas:
     def raices_cuadraticas(self, a, b, c):
         discriminante = self.discriminante(a, b, c)
 
-    def imc(self, peso, altura):
-        """
-        Calcula el Índice de Masa Corporal (IMC).
+    def raices_cuadraticas(self, a, b, c):
+        discriminante = self.discriminante(a, b, c)
 
-        Args:
-            peso (float): Peso en kilogramos
-            altura (float): Altura en metros
+        if discriminante < 0:
+            raise ValueError("No hay raíces reales")
 
-        Returns:
-            float: Índice de Masa Corporal
+        raiz = math.sqrt(discriminante)
 
-        Fórmula: IMC = peso / altura^2
+        raiz1 = (-b + raiz) / (2 * a)
+        raiz2 = (-b - raiz) / (2 * a)
 
-        Ejemplo:
-            imc(70, 1.75) -> 22.86
-        """
-        pass
+        return (raiz1, raiz2)
 
     def hipotenusa_pitagoras(self, cateto1, cateto2):
         """
