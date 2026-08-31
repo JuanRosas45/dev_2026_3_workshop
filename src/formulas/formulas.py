@@ -18,24 +18,7 @@ class Formulas:
     def energia_cinetica(self, masa, velocidad):
         return (1 / 2) * masa * velocidad ** 2
     def energia_potencial(self, masa, altura, gravedad=9.8):
-        """
-        Calcula la energía potencial gravitatoria de un objeto.
-
-        Args:
-            masa (float): Masa del objeto (kg)
-            altura (float): Altura sobre el suelo (metros)
-            gravedad (float): Aceleración de la gravedad (m/s^2), por defecto 9.8
-
-        Returns:
-            float: Energía potencial (Joules)
-
-        Fórmula: Ep = m * g * h
-
-        Ejemplo:
-            energia_potencial(2, 5) -> 98.0
-        """
-        pass
-
+        return masa * gravedad * altura
     def ley_ohm_voltaje(self, corriente, resistencia):
         """
         Calcula el voltaje usando la ley de Ohm.
