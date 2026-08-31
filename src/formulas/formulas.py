@@ -1,3 +1,4 @@
+import math
 class Formulas:
     """
     Clase con ejercicios de fórmulas de física, finanzas y álgebra.
