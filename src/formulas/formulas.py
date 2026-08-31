@@ -51,6 +51,9 @@ class Formulas:
         raiz2 = (-b - raiz) / (2 * a)
 
         return (raiz1, raiz2)
+    
+    def imc(self, peso, altura):
+        return peso / altura ** 2
 
     def hipotenusa_pitagoras(self, cateto1, cateto2):
         """
