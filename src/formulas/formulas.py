@@ -27,23 +27,7 @@ class Formulas:
         return voltaje / resistencia
 
     def interes_simple(self, capital, tasa, tiempo):
-        """
-        Calcula el interés generado por un capital a interés simple.
-
-        Args:
-            capital (float): Capital inicial
-            tasa (float): Tasa de interés anual (en decimal, ej. 0.05 para 5%)
-            tiempo (float): Tiempo en años
-
-        Returns:
-            float: Interés generado
-
-        Fórmula: I = C * r * t
-
-        Ejemplo:
-            interes_simple(1000, 0.05, 2) -> 100.0
-        """
-        pass
+        return capital * tasa * tiempo
 
     def interes_compuesto(self, capital, tasa, tiempo, n=1):
         """
