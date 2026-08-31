@@ -13,22 +13,7 @@ class Formulas:
         return velocidad_inicial + aceleracion * tiempo
 
     def fuerza_newton(self, masa, aceleracion):
-        """
-        Calcula la fuerza según la segunda ley de Newton.
-
-        Args:
-            masa (float): Masa del objeto (kg)
-            aceleracion (float): Aceleración (m/s^2)
-
-        Returns:
-            float: Fuerza (Newtons)
-
-        Fórmula: F = m * a
-
-        Ejemplo:
-            fuerza_newton(10, 2) -> 20.0
-        """
-        pass
+        return masa * aceleracion
 
     def energia_cinetica(self, masa, velocidad):
         """
