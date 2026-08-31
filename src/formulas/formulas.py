@@ -4,21 +4,6 @@ class Formulas:
     """
 
     def velocidad_media(self, distancia, tiempo):
-        """
-        Calcula la velocidad media de un recorrido.
-
-        Args:
-            distancia (float): Distancia recorrida (metros)
-            tiempo (float): Tiempo empleado (segundos)
-
-        Returns:
-            float: Velocidad media (metros/segundo)
-
-        Fórmula: v = d / t
-
-        Ejemplo:
-            velocidad_media(100, 10) -> 10.0
-        """
         return distancia / tiempo
 
     def mruv_posicion(self, posicion_inicial, velocidad_inicial, aceleracion, tiempo):
