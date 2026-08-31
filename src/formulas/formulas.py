@@ -16,23 +16,7 @@ class Formulas:
         return masa * aceleracion
 
     def energia_cinetica(self, masa, velocidad):
-        """
-        Calcula la energía cinética de un objeto en movimiento.
-
-        Args:
-            masa (float): Masa del objeto (kg)
-            velocidad (float): Velocidad del objeto (m/s)
-
-        Returns:
-            float: Energía cinética (Joules)
-
-        Fórmula: Ec = (1/2) * m * v^2
-
-        Ejemplo:
-            energia_cinetica(2, 3) -> 9.0
-        """
-        pass
-
+        return (1 / 2) * masa * velocidad ** 2
     def energia_potencial(self, masa, altura, gravedad=9.8):
         """
         Calcula la energía potencial gravitatoria de un objeto.
