@@ -56,19 +56,4 @@ class Formulas:
         return peso / altura ** 2
 
     def hipotenusa_pitagoras(self, cateto1, cateto2):
-        """
-        Calcula la longitud de la hipotenusa de un triángulo rectángulo.
-
-        Args:
-            cateto1 (float): Longitud del primer cateto
-            cateto2 (float): Longitud del segundo cateto
-
-        Returns:
-            float: Longitud de la hipotenusa
-
-        Fórmula: h = sqrt(cateto1^2 + cateto2^2)
-
-        Ejemplo:
-            hipotenusa_pitagoras(3, 4) -> 5.0
-        """
-        pass
+        return math.sqrt(cateto1 ** 2 + cateto2 ** 2)
