@@ -6,11 +6,10 @@ class Games:
         jugador1 = jugador1.lower()
         jugador2 = jugador2.lower()
 
-        opciones = ["piedra", "papel", "tijera"]
+        if jugador1 not in ["piedra", "papel", "tijera"]:
+            return "invalid"
 
-        if jugador1 not in opciones or jugador2 not in opciones:
-            if jugador1 not in opciones:
-                return "invalid"
+        if jugador2 not in ["piedra", "papel", "tijera"]:
             return "invalid"
 
         if jugador1 == jugador2:
@@ -41,17 +40,23 @@ class Games:
             if tablero[0][i] != " " and tablero[0][i] == tablero[1][i] == tablero[2][i]:
                 return tablero[0][i]
 
-        if tablero[0][0] != " " and tablero[0][0] == tablero[1][1] == tablero[2][2]:
-            return tablero[0][0]
-
-        if tablero[0][2] != " " and tablero[0][2] == tablero[1][1] == tablero[2][0]:
-            return tablero[0][2]
+        tablero_lleno = True
 
         for fila in tablero:
             if " " in fila:
-                return "continua"
+                tablero_lleno = False
+                break
 
-        return "empate"
+        if tablero_lleno:
+            if tablero[0][0] != " " and tablero[0][0] == tablero[1][1] == tablero[2][2]:
+                return tablero[0][0]
+
+            if tablero[0][2] != " " and tablero[0][2] == tablero[1][1] == tablero[2][0]:
+                return tablero[0][2]
+
+            return "empate"
+
+        return "continua"
 
     def generar_combinacion_mastermind(self, longitud, colores_disponibles):
         combinacion = []
