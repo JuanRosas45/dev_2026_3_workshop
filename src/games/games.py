@@ -9,6 +9,8 @@ class Games:
         opciones = ["piedra", "papel", "tijera"]
 
         if jugador1 not in opciones or jugador2 not in opciones:
+            if jugador1 not in opciones:
+                return "invalid"
             return "invalid"
 
         if jugador1 == jugador2:
@@ -26,36 +28,23 @@ class Games:
     def adivinar_numero_pista(self, numero_secreto, intento):
         if intento == numero_secreto:
             return "correcto"
-
-        if intento > numero_secreto:
+        elif intento > numero_secreto:
             return "muy alto"
-
-        return "muy bajo"
+        else:
+            return "muy bajo"
 
     def ta_te_ti_ganador(self, tablero):
         for i in range(3):
-            if (
-                tablero[i][0] == tablero[i][1] == tablero[i][2]
-                and tablero[i][0] != " "
-            ):
+            if tablero[i][0] != " " and tablero[i][0] == tablero[i][1] == tablero[i][2]:
                 return tablero[i][0]
 
-            if (
-                tablero[0][i] == tablero[1][i] == tablero[2][i]
-                and tablero[0][i] != " "
-            ):
+            if tablero[0][i] != " " and tablero[0][i] == tablero[1][i] == tablero[2][i]:
                 return tablero[0][i]
 
-        if (
-            tablero[0][0] == tablero[1][1] == tablero[2][2]
-            and tablero[0][0] != " "
-        ):
+        if tablero[0][0] != " " and tablero[0][0] == tablero[1][1] == tablero[2][2]:
             return tablero[0][0]
 
-        if (
-            tablero[0][2] == tablero[1][1] == tablero[2][0]
-            and tablero[0][2] != " "
-        ):
+        if tablero[0][2] != " " and tablero[0][2] == tablero[1][1] == tablero[2][0]:
             return tablero[0][2]
 
         for fila in tablero:
@@ -65,20 +54,31 @@ class Games:
         return "empate"
 
     def generar_combinacion_mastermind(self, longitud, colores_disponibles):
-        resultado = []
+        combinacion = []
 
         for _ in range(longitud):
-            resultado.append(random.choice(colores_disponibles))
+            combinacion.append(random.choice(colores_disponibles))
 
-        return resultado
+        return combinacion
 
     def validar_movimiento_torre_ajedrez(
-        self, desde_fila, desde_col, hasta_fila, hasta_col, tablero
+        self,
+        desde_fila,
+        desde_col,
+        hasta_fila,
+        hasta_col,
+        tablero
     ):
-        if not (0 <= desde_fila < 8 and 0 <= desde_col < 8):
+        if desde_fila < 0 or desde_fila > 7:
             return False
 
-        if not (0 <= hasta_fila < 8 and 0 <= hasta_col < 8):
+        if desde_col < 0 or desde_col > 7:
+            return False
+
+        if hasta_fila < 0 or hasta_fila > 7:
+            return False
+
+        if hasta_col < 0 or hasta_col > 7:
             return False
 
         if desde_fila == hasta_fila and desde_col == hasta_col:
@@ -88,18 +88,18 @@ class Games:
             return False
 
         if desde_fila == hasta_fila:
-            inicio = min(desde_col, hasta_col) + 1
+            inicio = min(desde_col, hasta_col)
             fin = max(desde_col, hasta_col)
 
-            for col in range(inicio, fin):
+            for col in range(inicio + 1, fin):
                 if tablero[desde_fila][col] != " ":
                     return False
 
         else:
-            inicio = min(desde_fila, hasta_fila) + 1
+            inicio = min(desde_fila, hasta_fila)
             fin = max(desde_fila, hasta_fila)
 
-            for fila in range(inicio, fin):
+            for fila in range(inicio + 1, fin):
                 if tablero[fila][desde_col] != " ":
                     return False
 
